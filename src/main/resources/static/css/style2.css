@@ -1,0 +1,724 @@
+/*  */
+/* nav */
+
+
+
+html,body{
+    font-family: 'Nanum Brush Script', cursive;
+    width:100%;
+    margin:0;
+   padding:0;
+   height:100%;
+
+}
+
+div,p,li,ul{
+    margin : 0px;
+    padding : 0px;
+}
+
+.wrapper{
+    min-height:100%;
+    padding-bottom : 174px;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+ul{
+    list-style: none;
+    padding-left:0px;
+}
+
+.pink{
+    background-color:rgba(173, 132, 132, 0.822);
+}
+.navibar{
+    display:flex;
+    justify-content: space-between;
+    font-size : 32px;
+    background-color:rgba(173, 132, 132, 0.822);
+}
+
+.navibar_img{
+
+    margin : auto 0px;
+}
+
+.navibar_menu{
+    display:flex;
+    margin-right:250px;
+}
+
+.navibar_menu li {
+    margin-right : 48px;
+
+
+}
+
+.navibar_menu li:hover, .navibar_icons li:hover{
+    background-color  : gray;
+}
+
+.navibar_icons {
+    display:flex;
+}
+
+.navibar_icons li{
+    margin-right : 48px;
+}
+
+.login_form{
+
+    padding-top: 20px;
+    text-align: center;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    width:20%;
+    height:100%;
+    background-color : salmon;
+    animation-name: loginbox;
+    animation-duration : 1s;
+    z-index: 7;
+}
+.air{
+
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 5;
+
+}
+
+.login_close{
+    position: absolute;
+    top:0;
+    right:0;
+}
+
+@keyframes loginbox{
+    from{
+        right:-30%;
+    }
+    to{
+        right:0;
+    }
+}
+
+
+.navbar_togleBtn{
+    display:none;
+    position:absolute;
+    top :5px;
+    right : 32px;
+    font-size:24px;
+
+}
+
+
+@media screen and (max-width : 1081px) {
+
+    .navibar{
+        flex-direction:column;
+        align-items : flex-start;
+        padding : 8px 24px;
+     }
+
+    .navibar_menu{
+        display:none;
+        flex-direction : column;
+        align-items: center;
+        width:100%;
+        margin:0px;
+    }
+
+    .footer_me{
+        display:none;
+    }
+
+    .navbar_togleBtn{
+        display:block;
+    }
+
+    .navibar_icons{
+        display:none;
+        justify-content:center;
+        width:100%;
+
+    }
+
+    #hide{
+        display : none;
+    }
+
+    .navibar_menu.active,
+.navibar_icons.active{
+    display: flex;
+}
+
+.mainbody_ul li p{
+    display: none;
+}
+.mainbody_ul2 li p{
+    display: none;
+}
+.mainbody_ul3 li p{
+    display: none;
+}
+
+
+}
+
+@media screen and (max-width : 1140px) {
+
+    .mainbody_ul li p, #hide{
+        font-size : 30px;
+    }
+    }
+    /*  */
+    /* mainScroll */
+
+    .mainscroll {
+
+        width:100%;
+        height:540px;
+    }
+    .mainscroll img{
+        width:100%;
+        height:540px;
+        margin : 0px auto;
+    }
+
+/*  */
+/* mainScroll */
+
+.mainscroll {
+
+    width:100%;
+    height:540px;
+}
+.mainscroll img{
+    width:100%;
+    height:540px;
+    margin : 0px auto;
+}
+
+/*  */
+/* mainbody */
+
+
+
+.introduce{
+    color : white;
+    text-align: left;
+    width:100%;
+
+    background-image: url(../img/board2.jpg);
+
+}
+
+
+
+
+.none{
+    display:none!important;
+}
+
+
+.mainbody{
+
+    width:100%;
+    text-align: center;
+
+    font-size:40px;
+}
+
+
+.mainbody_menu{
+    display:flex;
+    justify-content: center;
+
+}
+
+.mainbody_menu li{
+    margin-left : 35px;
+}
+
+.mainbody_menu li:hover{
+    background-color: orange;
+}
+
+
+
+
+.mainbody_ul li{
+    display: inline-block;
+    width: 15%;
+    background-color: orange;
+}
+
+.mainbody_ul li img{
+    width:100%;
+}
+
+.mainbody_ul li p{
+    font-size: 80%;
+}
+
+.mainbody_ul2 li{
+    display: inline-block;
+    width: 15%;
+    background-color: orange;
+}
+
+.mainbody_ul2 li img{
+    width:100%;
+
+}
+
+.mainbody2_ul li p{
+    font-size: 80%;
+}
+
+.mainbody_ul3 li{
+    display: inline-block;
+    width: 15%;
+    background-color: orange;
+    margin-bottom : 20px;
+}
+
+.mainbody_ul3 li img{
+    width:100%;
+}
+
+.mainbody_ul3 li p{
+    font-size: 80%;
+}
+.click{
+    display: inline-block;
+    width: 15%;
+}
+
+.Orange{
+    background-color: orange;
+}
+
+
+.body_wrap{
+    background-image: url(../img/board4.jpg);
+}
+
+
+
+
+/* swiper */
+
+.swiper-slide {
+    text-align:center;
+    display:flex; /* 내용을 중앙정렬 하기위해 flex 사용 */
+    align-items:center; /* 위아래 기준 중앙정렬 */
+    justify-content:center; /* 좌우 기준 중앙정렬 */
+}
+
+
+/*  */
+/* footer */
+
+.footer{
+    position : relative;
+    transform: translateY(-100%);
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    font-size: 25px;
+    background-color :rgba(173, 132, 132, 0.822);
+}
+
+.footer_notice{
+    margin-left:50px;
+}
+
+.footer_me{
+    margin-right:500px;
+}
+
+.footer_icons{
+    display:flex;
+    margin-right:30px;
+}
+
+.footer_icons li{
+    margin-right : 15px;
+    margin-top : 20px;
+}
+
+/*  */
+/* nav */
+
+
+
+html,body{
+    font-family: 'Nanum Brush Script', cursive;
+    width:100%;
+    margin:0;
+   padding:0;
+   height:100%;
+
+}
+
+div,p,li,ul{
+    margin : 0px;
+    padding : 0px;
+}
+
+.wrapper{
+    min-height:100%;
+    padding-bottom : 174px;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+ul{
+    list-style: none;
+    padding-left:0px;
+}
+
+.pink{
+    background-color:rgba(173, 132, 132, 0.822);
+}
+.navibar{
+    display:flex;
+    justify-content: space-between;
+    font-size : 32px;
+    background-color:rgba(173, 132, 132, 0.822);
+}
+
+.navibar_img{
+
+    margin : auto 0px;
+}
+
+.navibar_menu{
+    display:flex;
+    margin-right:250px;
+}
+
+.navibar_menu li {
+    margin-right : 48px;
+
+
+}
+
+.navibar_menu li:hover, .navibar_icons li:hover{
+    background-color  : gray;
+}
+
+.navibar_icons {
+    display:flex;
+}
+
+.navibar_icons li{
+    margin-right : 48px;
+}
+
+.login_form{
+
+    padding-top: 20px;
+    text-align: center;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    width:20%;
+    height:100%;
+    background-color : salmon;
+    animation-name: loginbox;
+    animation-duration : 1s;
+    z-index: 7;
+}
+.air{
+
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 5;
+
+}
+
+.login_close{
+    position: absolute;
+    top:0;
+    right:0;
+}
+
+@keyframes loginbox{
+    from{
+        right:-30%;
+    }
+    to{
+        right:0;
+    }
+}
+
+
+.navbar_togleBtn{
+    display:none;
+    position:absolute;
+    top :5px;
+    right : 32px;
+    font-size:24px;
+
+}
+
+
+@media screen and (max-width : 1081px) {
+
+    .navibar{
+        flex-direction:column;
+        align-items : flex-start;
+        padding : 8px 24px;
+     }
+
+    .navibar_menu{
+        display:none;
+        flex-direction : column;
+        align-items: center;
+        width:100%;
+        margin:0px;
+    }
+
+    .footer_me{
+        display:none;
+    }
+
+    .navbar_togleBtn{
+        display:block;
+    }
+
+    .navibar_icons{
+        display:none;
+        justify-content:center;
+        width:100%;
+
+    }
+
+    #hide{
+        display : none;
+    }
+
+    .navibar_menu.active,
+.navibar_icons.active{
+    display: flex;
+}
+
+.mainbody_ul li p{
+    display: none;
+}
+.mainbody_ul2 li p{
+    display: none;
+}
+.mainbody_ul3 li p{
+    display: none;
+}
+
+
+}
+
+@media screen and (max-width : 1140px) {
+
+    .mainbody_ul li p, #hide{
+        font-size : 30px;
+    }
+    }
+    /*  */
+    /* mainScroll */
+
+    .mainscroll {
+
+        width:100%;
+        height:540px;
+    }
+    .mainscroll img{
+        width:100%;
+        height:540px;
+        margin : 0px auto;
+    }
+
+/*  */
+/* mainScroll */
+
+.mainscroll {
+
+    width:100%;
+    height:540px;
+}
+.mainscroll img{
+    width:100%;
+    height:540px;
+    margin : 0px auto;
+}
+
+/*  */
+/* mainbody */
+
+
+
+.introduce{
+    color : white;
+    text-align: left;
+    width:100%;
+
+    background-image: url(../img/board2.jpg);
+
+}
+
+
+
+
+.none{
+    display:none!important;
+}
+
+
+.mainbody{
+
+    width:100%;
+    text-align: center;
+
+    font-size:40px;
+}
+
+
+.mainbody_menu{
+    display:flex;
+    justify-content: center;
+
+}
+
+.mainbody_menu li{
+    margin-left : 35px;
+}
+
+.mainbody_menu li:hover{
+    background-color: orange;
+}
+
+
+
+
+.mainbody_ul li{
+    display: inline-block;
+    width: 15%;
+    background-color: orange;
+}
+
+.mainbody_ul li img{
+    width:100%;
+}
+
+.mainbody_ul li p{
+    font-size: 80%;
+}
+
+.mainbody_ul2 li{
+    display: inline-block;
+    width: 15%;
+    background-color: orange;
+}
+
+.mainbody_ul2 li img{
+    width:100%;
+
+}
+
+.mainbody2_ul li p{
+    font-size: 80%;
+}
+
+.mainbody_ul3 li{
+    display: inline-block;
+    width: 15%;
+    background-color: orange;
+    margin-bottom : 20px;
+}
+
+.mainbody_ul3 li img{
+    width:100%;
+}
+
+.mainbody_ul3 li p{
+    font-size: 80%;
+}
+.click{
+    display: inline-block;
+    width: 15%;
+}
+
+.Orange{
+    background-color: orange;
+}
+
+
+.body_wrap{
+    background-image: url(../img/board4.jpg);
+}
+
+
+
+
+/* swiper */
+
+.swiper-slide {
+    text-align:center;
+    display:flex; /* 내용을 중앙정렬 하기위해 flex 사용 */
+    align-items:center; /* 위아래 기준 중앙정렬 */
+    justify-content:center; /* 좌우 기준 중앙정렬 */
+}
+
+
+/*  */
+/* footer */
+
+.footer{
+    position : relative;
+    transform: translateY(-100%);
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    font-size: 25px;
+    background-color :rgba(173, 132, 132, 0.822);
+}
+
+.footer_notice{
+    margin-left:50px;
+}
+
+.footer_me{
+    margin-right:500px;
+}
+
+.footer_icons{
+    display:flex;
+    margin-right:30px;
+}
+
+.footer_icons li{
+    margin-right : 15px;
+    margin-top : 20px;
+}
+
