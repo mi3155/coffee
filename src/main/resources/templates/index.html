@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+<!--  kakao api-->
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f0d3a66227fb6d2ff25fb5d07a52fdfa&libraries=services"></script>
   <!-- swiper js -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
 
@@ -36,15 +38,15 @@
 
     <ul class = "navibar_icons">
       <li><a href="#" class = "login">로그인</a></li>
-      <form action="#" method="post" class = "login_form none">
+      <form action="/loginProc" method="post" class = "login_form none">
         <div class="login_width">
           <i class="fa-solid fa-ice-cream"></i>
           <a href="#">달디단coffee</a><input type="button" value="X" class=" login_close" onclick = winclose()><br>
 
-          아이디<br><input type="text" name = "username" ><br><br>
+          아이디<br><input type="text" name = "id" ><br><br>
           비밀번호<br><input type="password" name = "password"><br>
-          <input type="submit" value="로그인" >
-          <input type="button" value="회원가입">
+          <input type="submit"  value="로그인" >
+          <input type="button" onclick="location.href='Signup'"  value="회원가입">
 
         </div>
       </form>
@@ -192,6 +194,10 @@
 
 
     <p class = "pink">오시는 길</p>
+    <br>
+    <div id="map" class=" mapmap" style="width:50%;height:600px;"></div>
+    <div class="location"> 위치 : 경상북도 칠곡군 북삼읍 인강8길 21 </div>
+    <br>
 
   </mainbody>
 
@@ -226,6 +232,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
 <script src="../js/main2.js" defer></script>
+<script src="../js/kakaomap.js" defer></script>
 
 </body>
 </html>

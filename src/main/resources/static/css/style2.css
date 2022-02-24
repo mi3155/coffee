@@ -174,7 +174,6 @@ ul{
     display: none;
 }
 
-
 }
 
 @media screen and (max-width : 1140px) {
@@ -328,7 +327,20 @@ ul{
     justify-content:center; /* 좌우 기준 중앙정렬 */
 }
 
+/* mapwidth */
 
+
+.mapmap{
+
+    margin : auto;
+
+}
+
+.location{
+    width:50%;
+    background-color : pink;
+    margin : auto;
+}
 /*  */
 /* footer */
 
