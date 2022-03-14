@@ -34,10 +34,20 @@ public class commonController {
     @PostMapping("/SignupProc")
     public String test3(loginDTO dto){
         System.out.println(dto.toString());
-        CoffeeService.CoffeeSignup(dto);
+        CoffeeService.save(dto);
         System.out.println("id : " + dto.getId() + "님 가입을 환영합니다.");
 
         return "index.html";
+    }
+
+    @GetMapping("/loginfailed")
+    public String text4(){
+        return "loginfailed.html";
+    }
+
+    @GetMapping("test")
+    public String text5(){
+        return "text.html";
     }
 
 }

@@ -9,11 +9,17 @@
 <div>
 
     <form action="/SignupProc" method="post">
+
+        <input type="radio" name="auth" value ="ROLE_ADMIN,ROLE_USER" > 팀장 <br>
+        <input type="radio" name="auth" value ="ROLE_USER," > 손님 <br>
+
         <h1>달디단Coffee</h1>
         아이디 : <input type="text" name="id" ><br>
         패스워드 : <input type="password" name="password"><br>
         주소 : <input type="text" name ="address"><br>
         휴대폰 : <input type="text" name = "phone"><br>
+
+
 
         <input type="submit" value="가입하기">
     </form>

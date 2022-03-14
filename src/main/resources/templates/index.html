@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,43 +19,11 @@
 
 </head>
 <body>
-<div class = "air none"></div>
+
 <div class="wrapper">
   <!-- nav -->
-  <nav class="navibar">
-    <div class = "navibar_img">
-      <i class="fa-solid fa-ice-cream"></i>
-      <a href="#">달디단coffee</a>
-    </div>
 
-    <ul class = "navibar_menu">
-      <li><a>달아달아</a></li>
-      <li><a>메뉴</a></li>
-      <li><a>소개글</a></li>
-      <li><a>공지</a></li>
-      <li><a>오시는 길</a></li>
-    </ul>
-
-    <ul class = "navibar_icons">
-      <li><a href="#" class = "login">로그인</a></li>
-      <form action="/loginProc" method="post" class = "login_form none">
-        <div class="login_width">
-          <i class="fa-solid fa-ice-cream"></i>
-          <a href="#">달디단coffee</a><input type="button" value="X" class=" login_close" onclick = winclose()><br>
-
-          아이디<br><input type="text" name = "id" ><br><br>
-          비밀번호<br><input type="password" name = "password"><br>
-          <input type="submit"  value="로그인" >
-          <input type="button" onclick="location.href='Signup'"  value="회원가입">
-
-        </div>
-      </form>
-    </ul>
-
-    <a href="#" class="navbar_togleBtn">
-      <i class="fa-solid fa-burger"></i>
-    </a>
-  </nav>
+  <div th:replace="common/nav"></div>
 
   <mainScroll class="mainscroll">
     <div class="swiper-container">
@@ -204,30 +172,7 @@
 
 </div>
 
-<footer class ="footer">
-  <ul class = "footer_notice">
-    <li><a href="">개인정보 처리방침</a></li>
-    <li><a href="">위치정보 이용약관</a></li>
-    <li><a href="">사이트맵</a></li>
-    <li><a href="">임차문의</a></li>
-    <li><a href="">고객문의</a></li>
-    <li><a href="">직원채용</a></li>
-  </ul>
-
-  <ul class = footer_me>
-    <li>달디단coffee</a></li>
-    <li>대표이사 : Hwang Ji Hwan</a></li>
-    <li>대표번호 : 010-4508-3155</a></li>
-    <li>전화주문 : 054-974-3155</a></li>
-    <li>문의 : Hwan3155@naver.com</a></li>
-  </ul>
-
-  <ul class = "footer_icons">
-    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
-    <li><a href=""><i class="fa-brands fa-google"></i></a></li>
-    <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-  </ul>
-</footer>
+    <div th:replace ="common/footer"></div>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>

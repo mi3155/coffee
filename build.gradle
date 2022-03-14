@@ -20,6 +20,9 @@ repositories {
 
 dependencies {
 
+	//security 추가
+	implementation 'org.springframework.boot:spring-boot-starter-security:2.6.2'
+
 	//thymeleaf
 	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
 

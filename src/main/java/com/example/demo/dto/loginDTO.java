@@ -15,4 +15,5 @@ public class loginDTO {
     private String password;
     private String address;
     private int phone;
+    private String auth;
 }
