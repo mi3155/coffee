@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script src="https://kit.fontawesome.com/156864af6f.js" crossorigin="anonymous"></script>
+
   <link rel="stylesheet" href="../css/style2.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,11 +21,26 @@
 </head>
 <body>
 
+<div class ="popup">
+  <h2> 사장님이 최애하는 아샷추</h2>
+  <h1 class = "Sail"> 30% 세일 </h1>
+
+  <div class ="imgcon">
+    <img src="img/menu2/menu6.png">
+  </div>
+
+  <div class = "addraw">
+  <input type="checkbox" id="popup">
+  <label for="popup">하루 안보기</label>
+  <button class="popupclose">닫기</button>
+  </div>
+</div>
+
+
 <div class="wrapper">
   <!-- nav -->
 
   <div th:replace="common/nav"></div>
-
   <mainScroll class="mainscroll">
     <div class="swiper-container">
       <div class="swiper-wrapper">
@@ -177,7 +193,9 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
 <script src="../js/main2.js" defer></script>
+<script src="../js/common.js" defer></script>
 <script src="../js/kakaomap.js" defer></script>
 
+<script src="../js/adclose.js" defer></script>
 </body>
 </html>

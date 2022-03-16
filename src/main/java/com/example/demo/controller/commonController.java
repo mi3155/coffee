@@ -26,6 +26,15 @@ public class commonController {
 
     }
 
+    @GetMapping("/notice")
+    public String notice()
+    {
+        return "Notice.html";
+
+    }
+
+
+
     @GetMapping("/Signup")
     public String test2(){
         return "Signup.html";
