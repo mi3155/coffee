@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class = "air none"></div>
+<nav class="navibar">
+    <div class = "navibar_img">
+        <a href="logincoffee"> <i class="fa-solid fa-ice-cream"></i>
+            달디단coffee</a>
+    </div>
+
+    <ul class = "navibar_menu">
+        <li><a>달아달아</a></li>
+        <li><a>메뉴</a></li>
+        <li><a>소개글</a></li>
+        <li><a href="/notice">공지사항</a></li>
+        <li><a>오시는 길</a></li>
+    </ul>
+
+    <ul class = "navibar_icons">
+        <li><a id ="welcome"><span  th:text="${login.Username}" ></span> 님 환영합니다! </a></li>
+        <li><a href="/logout" class = "login">로그아웃</a></li>
+    </ul>
+
+    <a href="#" class="navbar_togleBtn">
+        <i class="fa-solid fa-burger"></i>
+    </a>
+</nav>
+
+</body>
+</html>

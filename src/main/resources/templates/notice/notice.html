@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/156864af6f.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../css/style2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <!--  kakao api-->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f0d3a66227fb6d2ff25fb5d07a52fdfa&libraries=services"></script>
+    <!-- swiper js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+
+
+
+</head>
+<body>
+
+<div class="wrapper">
+    <!-- nav -->
+
+    <div th:replace="common/loginnav"></div>
+
+    <div class="notice" style="margin : 0px auto">
+        <th:block >
+
+            <table>
+                <tr>
+                    <td>
+                        현재페이지 : <span th:text="${list.getNumber}+1" style="color:red;"></span> /  <span th:text="${list.getTotalPages}"></span>
+                    </td>
+                </tr>
+            </table>
+            <table  class="table" align="center">
+                <tr>
+                    <th>번호</th>
+                    <th> ID </th>
+                    <th>제목</th>
+                    <th>등록날짜</th>
+                    <th>조회수</th>
+                </tr>
+                <tr th:each="dto:${list}">
+                    <td style="width:50px"><a th:href="@{/read(num=${dto.num},nowPage=${nowPage})}" th:text="${dto.num}"> </a></td>
+                    <td style="width:150px" th:text="${dto.id}">  </td>
+                    <td style="width:200px"><a  th:href="@{/read(num=${dto.num},nowPage=${nowPage})}" th:text="${dto.subject}"> </a></td>
+                    <td style="width:200px" th:text="${dto.regdate}"></td>
+                    <td style="width:100px" th:text="${dto.count}"></td>
+                </tr>
+            </table>
+        </th:block>
+
+
+        <div class="row">
+
+            <div class="col-md-9">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <!--  이전블럭이동             -->
+                        <th:block th:if="${nowBlock>1}">
+                            <li class="page-item">
+                                <a class="page-link" th:href="@{/notice(nowPage=${pagePerBlock}*${nowBlock-1-1}+1)}" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                        </th:block>
+
+                        <!-- 한블럭당 표시할 페이지 수(반복문)                -->
+                        <th:block th:each="num : ${#numbers.sequence(PS,PE-1)}">
+                            <li class="page-item">
+                                <a class="page-link" th:href="@{/notice(nowPage=${num})}" th:text="${num}"></a>
+                            </li>
+                        </th:block>
+
+                        <!-- 다음블럭이동        -->
+                        <th:block th:if="${totalBlock>nowBlock}">
+                            <li class="page-item">
+                                <a class="page-link" th:href="@{/notice(nowPage=${pagePerBlock}*${nowBlock-1+1}+1)}" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </th:block>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-3">
+                <a class="button" href="/write">글쓰기</a>
+                <a class="button" th:href="@{/notice(nowPage=1)}">처음으로</a>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+
+<div th:replace ="common/footer"></div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+<script src="../js/main2.js" defer></script>
+<script src="../js/common.js" defer></script>
+<script src="../js/kakaomap.js" defer></script>
+
+<script src="../js/adclose.js" defer></script>
+</body>
+</html>

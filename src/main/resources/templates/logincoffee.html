@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/156864af6f.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../css/style2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <!--  kakao api-->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f0d3a66227fb6d2ff25fb5d07a52fdfa&libraries=services"></script>
+    <!-- swiper js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+
+
+
+</head>
+<body>
+
+<div class ="popup">
+    <h2> 사장님이 최애하는 아샷추</h2>
+    <h1 class = "Sail"> 30% 세일 </h1>
+
+    <div class ="imgcon">
+        <img src="img/menu2/menu6.png">
+    </div>
+
+    <div class = "addraw">
+        <input type="checkbox" id="popup">
+        <label for="popup">하루 안보기</label>
+        <button class="popupclose">닫기</button>
+    </div>
+</div>
+
+
+<div class="wrapper">
+    <!-- nav -->
+
+    <div th:replace="common/loginnav"></div>
+    <mainScroll class="mainscroll">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/coffee.jpg"></div>
+                <div class="swiper-slide"><img src="img/coffee2.jpg"></div>
+                <div class="swiper-slide"><img src="img/coffee3.jpg"></div>
+                <div class="swiper-slide"><img src="img/coffee4.jpg"></div>
+                <div class="swiper-slide"><img src="img/coffee5.jpg"></div>
+
+            </div>
+        </div>
+    </mainScroll>
+
+    <mainbody class="mainbody">
+        <p class = "pink">소개 글</p>
+
+        <div class ="introduce">
+            안녕하세요 달디단coffee입니다 <br>
+
+            달디단coffee는 수입부터 블렌딩/로스팅/신선도 유지까지 완벽한 원두
+            고객분들이 흔히 하는 오해 중 하나가 바로 <b>“저렴한 커피는 퀄리티도 낮다”</b> 입니다. <br><br>
+            커피의 가격과 퀄리티의 연관성은 당연할 수 있지만, 빽다방은 그 선입견을 깨고자 노력하고 있습니다.<br><br>
+            <div id = "hide">
+                원두는 수확한지 1년 미만 된 생두를 엄격한 기준을 토대로 선별하여 수입합니다.<br>
+                까다로운 조건을 통과하여 수입된 원두는 최상의 공간에서 최적의 배전도로 로스팅 되고, 로스팅이 완료된 원두는 신선도 유지를 위해 2일 내로 전국 가맹점에 빠르게 배송되며, 매장에서는 로스팅 완료 후 2주 내에 사용할 수 있게끔 엄격한 시스템이 운영되고 있습니다.<br>
+
+                이렇게 만들어지는 빽다방 원두는 브라질 원두 고유의 묵직한 바디감과 아몬드의 고소함, 밀크초콜릿 같은 은은한 단맛이 강점입니다.
+            </div>
+        </div>
+
+
+        <p class = "pink">메뉴</p>
+
+        <div class = " body_wrap">
+            <ul class ="mainbody_menu">
+                <li id ="coffee" class ="Orange">커피</li>
+                <li id ="drink">음료</li>
+                <li id ="icecream">아이스크림/디저트</li>
+            </ul>
+            <br>
+
+            <div id ="coffee_menu">
+                <ul class = "mainbody_ul">
+
+                    <li >
+                        <img src="img/menu2/menu1.png">
+                        <p>원조커피</p>
+                    </li>
+                    <li>
+                        <img src="img/menu2/menu2.png">
+                        <p>달달연유라떼</p>
+                    </li>
+                    <li>
+                        <img src="img/menu2/menu3.png">
+                        <p>빽`s 라떼</p>
+                    </li>
+                    <li>
+                        <img src="img/menu2/menu4.png">
+                        <p>콜드브루 디카페인</p>
+                    </li>
+                    <li>
+                        <img src="img/menu2/menu5.png">
+                        <p>콜드브루라떼 디카페인</p>
+                    </li>
+                    <li>
+                        <img src="img/menu2/menu6.png">
+                        <p>아샷추</p>
+                    </li>
+                </ul>
+            </div>
+            <div id ="drink_menu">
+                <ul class = "mainbody_ul2">
+
+                    <li class="none">
+                        <img src="img/menu2/menu7.png">
+                        <p>콤부차(라즈베리)</p>
+                    </li>
+                    <li class="none">
+                        <img src="img/menu2/menu8.png">
+                        <p>콤부차(그린애플)</p>
+                    </li>
+                    <li class="none">
+                        <img src="img/menu2/menu9.png">
+                        <p>완전토마토</p>
+                    </li>
+                    <li class="none">
+                        <img src="img/menu2/menu10.png">
+                        <p>배꿀스무디</p>
+                    </li>
+                </ul>
+            </div>
+            <div id ="icecream_menu">
+                <ul class = "mainbody_ul3">
+
+                    <li class="none">
+                        <img src="img/menu2/menu11.png">
+                        <p>공공치빵(파맛)</p>
+                    </li>
+                    <li class="none">
+                        <img src="img/menu2/menu12.png">
+                        <p>공공치빵(초코맛)</p>
+                    </li>
+                    <li class="none">
+                        <img src="img/menu2/menu13.png">
+                        <p>크리미슈</p>
+                    </li>
+                    <li class="none">
+                        <img src="img/menu2/menu14.png">
+                        <p>노말한소프트</p>
+                    </li>
+                    <li class="none">
+                        <img src="img/menu2/menu15.png">
+                        <p>사라다빵</p>
+                    </li>
+                    <li class="none">
+                        <img src="img/menu2/menu16.png">
+                        <p>소세지빵</p>
+                    </li>
+                    <li class="none">
+                        <img src="img/menu2/menu17.png">
+                        <p>순우유 맛카롱</p>
+                    </li>
+                    <li class="none">
+                        <img src="img/menu2/menu18.png">
+                        <p>초코크런치 맛카롱</p>
+                    </li>
+                    <li class="none">
+                        <img src="img/menu2/menu19.png">
+                        <p>딸기크런치 맛카롱</p>
+                    </li>
+                </ul>
+            </div>
+            <br>
+        </div>
+
+
+        <p class = "pink">오시는 길</p>
+        <br>
+        <div id="map" class=" mapmap" style="width:50%;height:600px;"></div>
+        <div class="location"> 위치 : 경상북도 칠곡군 북삼읍 인강8길 21 </div>
+        <br>
+
+    </mainbody>
+
+
+</div>
+
+<div th:replace ="common/footer"></div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+<script src="../js/main2.js" defer></script>
+<script src="../js/common.js" defer></script>
+<script src="../js/kakaomap.js" defer></script>
+
+<script src="../js/adclose.js" defer></script>
+</body>
+</html>

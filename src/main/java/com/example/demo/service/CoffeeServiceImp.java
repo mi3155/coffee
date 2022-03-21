@@ -27,7 +27,6 @@ public class CoffeeServiceImp implements UserDetailsService {
         coffee.setPassword(dto.getPassword());
         coffee.setAddress(dto.getAddress());
         coffee.setPhone(dto.getPhone());
-
         Coffeerepo.save(coffee);
 
         return coffee;
@@ -46,11 +45,11 @@ public class CoffeeServiceImp implements UserDetailsService {
     }
 
     public Coffee save(loginDTO dto){
-       // BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
         dto.setPassword(dto.getPassword());
         Coffee coffee = new Coffee();
         coffee.setId(dto.getId());
-        coffee.setPassword(dto.getPassword());
+        coffee.setPassword(encoder.encode(dto.getPassword()));
         coffee.setAddress(dto.getAddress());
         coffee.setPhone(dto.getPhone());
         coffee.setAuth(dto.getAuth());

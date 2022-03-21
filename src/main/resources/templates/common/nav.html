@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -8,15 +8,15 @@
 <div class = "air none"></div>
 <nav class="navibar">
     <div class = "navibar_img">
-        <i class="fa-solid fa-ice-cream"></i>
-        <a href="#">달디단coffee</a>
+        <a href="coffee"> <i class="fa-solid fa-ice-cream"></i>
+       달디단coffee</a>
     </div>
 
     <ul class = "navibar_menu">
         <li><a>달아달아</a></li>
         <li><a>메뉴</a></li>
         <li><a>소개글</a></li>
-        <li><a>공지</a></li>
+        <li><a href="/notice   ">공지사항</a></li>
         <li><a>오시는 길</a></li>
     </ul>
 
@@ -39,6 +39,9 @@
         <input type="submit"  value="로그인" >
         <input type="button" onclick="location.href='Signup'"  value="회원가입">
 
+<!--        <div th:if="${param.error}">-->
+<!--            <p th:text="${exception}" class="alert"></p>-->
+<!--        </div>-->
     </div>
 </form>
 </body>

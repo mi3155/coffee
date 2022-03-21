@@ -42,6 +42,7 @@ public class Coffee implements UserDetails {
     @Column
     private String auth;
 
+
     public Coffee(String id, String password, String address, int phone, String auth){
         this.id=id;
         this.password=password;

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/156864af6f.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../css/style2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <!--  kakao api-->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f0d3a66227fb6d2ff25fb5d07a52fdfa&libraries=services"></script>
+    <!-- swiper js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+
+
+
+</head>
+<body>
+
+<div class="wrapper">
+    <!-- nav -->
+
+    <div th:replace="common/loginnav"></div>
+
+    <div  style="margin :10px auto; width: 1168px;">
+        <form method="post" action="/updateProc">
+            패스워드 : <input type="password" class="form-control" name="password" style="width:25%"><br>
+            <input type="hidden" name="id" th:value="${dto.id}">
+            <input type="hidden" name="subject" th:value="${dto.subject}">
+            <input type="hidden" name="content" th:value="${dto.content}">
+            <input type="submit" value="확인">
+        </form>
+    </div>
+
+</div>
+
+<div th:replace ="common/footer"></div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+<script src="../js/main2.js" defer></script>
+<script src="../js/common.js" defer></script>
+<script src="../js/kakaomap.js" defer></script>
+
+<script src="../js/adclose.js" defer></script>
+</body>
+</html>
