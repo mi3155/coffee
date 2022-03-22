@@ -8,6 +8,7 @@
     <script src="https://kit.fontawesome.com/156864af6f.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="../css/style2.css">
+    <link rel="stylesheet" href="../css/notice.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
@@ -23,10 +24,9 @@
 
 <div class="wrapper">
     <!-- nav -->
-
     <div th:replace="common/loginnav"></div>
-
-    <div class="notice" style="margin : 0px auto">
+    <br><br><br><br><br><br><br>
+    <div class="notice" style="margin : 0px auto;  ">
         <th:block >
 
             <table>
@@ -36,7 +36,7 @@
                     </td>
                 </tr>
             </table>
-            <table  class="table" align="center">
+            <table  class="table" style="text-align : center;" align="center">
                 <tr>
                     <th>번호</th>
                     <th> ID </th>
@@ -47,7 +47,7 @@
                 <tr th:each="dto:${list}">
                     <td style="width:50px"><a th:href="@{/read(num=${dto.num},nowPage=${nowPage})}" th:text="${dto.num}"> </a></td>
                     <td style="width:150px" th:text="${dto.id}">  </td>
-                    <td style="width:200px"><a  th:href="@{/read(num=${dto.num},nowPage=${nowPage})}" th:text="${dto.subject}"> </a></td>
+                    <td style="width:300px"><a  th:href="@{/read(num=${dto.num},nowPage=${nowPage})}" th:text="${dto.subject}"> </a></td>
                     <td style="width:200px" th:text="${dto.regdate}"></td>
                     <td style="width:100px" th:text="${dto.count}"></td>
                 </tr>
@@ -59,7 +59,7 @@
 
             <div class="col-md-9">
                 <nav aria-label="Page navigation example">
-                    <ul class="pagination">
+                    <ul class="pagination" style="margin-left:600px">
                         <!--  이전블럭이동             -->
                         <th:block th:if="${nowBlock>1}">
                             <li class="page-item">
@@ -87,8 +87,8 @@
                     </ul>
                 </nav>
             </div>
-            <div class="col-md-3">
-                <a class="button" href="/write">글쓰기</a>
+            <div class="col-md-3" style="text-align:right; margin-right:10px;">
+                <a class="button" href="/write" style="margin-right:30px">글쓰기</a>
                 <a class="button" th:href="@{/notice(nowPage=1)}">처음으로</a>
             </div>
 

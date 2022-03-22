@@ -8,6 +8,7 @@
     <script src="https://kit.fontawesome.com/156864af6f.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="../css/style2.css">
+    <link rel="stylesheet" href="../css/Signup.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
@@ -27,7 +28,9 @@
     <div th:replace="common/loginnav"></div>
 
     <div  style="margin :10px auto; width: 1168px;">
+        <br><br>
         <form method="post" action="/deleteProc">
+            삭제하시려면 비밀번호를 다시 적어주세요<br><br>
             패스워드 : <input type="password" class="form-control" name="password" style="width:25%"><br>
 
             <input type="submit" value="확인">

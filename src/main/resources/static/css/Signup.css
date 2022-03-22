@@ -1,3 +1,9 @@
 .wrapper{
     text-align : center;
+    font-size : 30px;
+    min-height:calc(100% - 174px);
 }
+
+
+.id_ok{color:#fff; display: none;}
+.id_already{color:#6A82FB; display: none;}

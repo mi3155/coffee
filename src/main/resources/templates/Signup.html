@@ -14,32 +14,35 @@
 </head>
 <body>
 
-<div class="wrapper">
+<div class="wrapper" >
     <!-- nav -->
 
     <div th:replace="common/nav"></div>
-    <br>
+    <br><br><br>
+    <div>
 
     <h1> 달디단coffee 회원가입</h1>
     <br>
-
-    <div>
 
         <form action="/SignupProc" method="post">
 
             <input type="radio" name="auth" value ="ROLE_ADMIN,ROLE_USER" > 팀장
             <input type="radio" name="auth" value ="ROLE_USER," > 손님 <br>
 
-           <div style="width:80px margin-right:0px "> 아이디  </div><input type="text" name="id" placeholder="id">
-           <div style="width:80px margin-right:0px"> 패스워드  </div><input type="password" name="password" placeholder="pw"><br>
-           <div style="width:80px margin-right:0px"> 주소  </div><input type="text" name ="address" placeholder="address">
-           <div style="width:80px margin-right:0px"> 휴대폰  </div><input type="text" name = "phone" placeholder="phone">
+           <div style="width:80px margin-right:0px"> 아이디  </div>
+            <span class="id_ok">사용 가능한 아이디입니다.</span>
+            <span class="id_already">누군가 이 아이디를 사용하고 있어요.</span>
+            <input type="text" name="id" placeholder="id"> <button onclick="/idcheck">중복 확인</button>
+           <div style="width:80px margin-right:0px"> 패스워드  </div>
+            <input type="password" name="password" placeholder="pw">
+           <div style="width:80px margin-right:0px"> 주소  </div>
+            <input type="text" name ="address" placeholder="address">
+           <div style="width:80px margin-right:0px"> 휴대폰  </div>
+            <input type="text" name = "phone" placeholder="phone">
             <br>
-
             <input type="submit" value="가입하기">
         </form>
-    </div>
-
+</div>
 </div>
 
 <div th:replace ="common/footer"></div>
@@ -47,6 +50,22 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
 <script src="../js/common.js" defer></script>
-
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+    function checkId(){
+        var id = $('#id').val(); //id값이 "id"인 입력란의 값을 저장
+        $.ajax({
+            url:'/user/idCheck', //Controller에서 인식할 주소
+            type:'post', //POST 방식으로 전달
+            data:{id:id},
+            success:function(){
+                console.log("처리 성공 시 변경되는 내용");
+            },
+            error:function(){
+                alert("에러입니다");
+            }
+        });
+    };
+</script>
 </body>
 </html>

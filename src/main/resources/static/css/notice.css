@@ -1,0 +1,12 @@
+.notice{
+    width:1200px;
+    font-size:25px;
+}
+.pagination li{
+    float:left;
+    margin-right:10px;
+}
+
+.wrapper{
+    min-height:calc(100% - 174px);
+}

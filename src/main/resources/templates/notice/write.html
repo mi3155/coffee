@@ -8,6 +8,7 @@
     <script src="https://kit.fontawesome.com/156864af6f.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="../css/style2.css">
+    <link rel="stylesheet" href="../css/Signup.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
@@ -21,33 +22,34 @@
 </head>
 <body>
 
-<div class="wrapper">
+<div class="wrapper" >
     <!-- nav -->
 
     <div th:replace="common/loginnav"></div>
-
+    <br><br><br><br>
     <div class="notice" style="margin:0px auto">
         <form method="post" action="/writeproc" >
             <h2 class = "subject">글쓰기</h2>
             <div>
                 ID
-                <div><input type="text" name="id" class="form-control mb-3" th:value="${login.id}" disabled style="width:25%"></div>
+                <input type="text" name="id" class="form-control mb-3" th:value="${login.id}" disabled style="width:25%">
             </div>
             <div>
                 게시물 비밀번호
-                <div><input type="password"  name="password" placeholder="비밀번호를 입력하세요." class="form-control mb-3" style="width:25%"></div>
+                <input type="password"  name="password" placeholder="비밀번호를 입력하세요." class="form-control mb-3" style="width:25%">
             </div>
             <div>
                 제목
-                <div><input type="text" name="subject" placeholder="제목을 입력하세요." class="form-control mb-3" style="width:50%"></div>
+                <input type="text" name="subject" placeholder="제목을 입력하세요." class="form-control mb-3" style="width:50%">
             </div>
+            <br>
             <div>
                 내용
-                <div><textarea name="content" placeholder="내용을 입력하세요."  class="form-control mb-3" style="width:50%"></textarea></div>
+                <textarea name="content" placeholder="내용을 입력하세요."  class="form-control mb-3" style="width:50%"></textarea>
             </div>
 
             <div>
-                <div style="text-align:right">
+                <div style="text-align:center">
                     <input type="submit" value="글쓰기" class="button" >&nbsp;
                     <a href="#" onclick="history.go(-1)" class="button">이전으로</a>
                 </div>
